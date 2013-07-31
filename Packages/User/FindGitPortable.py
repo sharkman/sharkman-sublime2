@@ -11,6 +11,6 @@ class FindGitPortableBinaryCommand(sublime_plugin.WindowCommand):
     """
     def run(self, **kwargs):
         for d in glob.glob(os.path.join(os.environ["LOCALAPPDATA"], "GitHub", "PortableGit_*")):
-            sublime.load_settings("Git.sublime-settings").set("git_command", os.path.join(d, "bin", "git"))
+            sublime.load_settings("Git.sublime-settings").set("git_command", os.path.join(d, "bin", "git.exe"))
             sublime.save_settings("Git.sublime-settings")
             break
